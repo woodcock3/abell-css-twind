@@ -7,7 +7,7 @@ const esbuildPipeline = require('./config/build/esbuild.js');
 const path = require("path");
 const manifest = require('./src/_data/manifest.json');
 
-const TEMPLATE_ENGINE = "liquid";
+const TEMPLATE_ENGINE = "njk";
 
 module.exports = function (eleventyConfig) {
   // DEV SERVER
@@ -34,6 +34,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 
     './_tmp': './assets/css',
   });
+  
+  eleventyConfig.addPassthroughCopy('./src/fonts');
+  eleventyConfig.addPassthroughCopy('./src/images');
+
+  config.addFilter('md', require('./src/filters/md.js'));
 
   // SHORTCODES & FILTERS
   // Add cache busting by using {{ 'myurl' | version }}
