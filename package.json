@@ -1,8 +1,8 @@
 {
-  "name": "11ty-solid-base",
+  "name": "build-excellent-websites",
   "version": "0.1.1",
-  "description": "A minimal HTML5 template and the esbuild setup to compile your Solidjs app alongside 11ty.",
-  "main": "docs/index.html",
+  "description": "Andy Bell's css tailwind setup.",
+  "main": ".eleventy.js",
   "scripts": {
     "clean": "node config/clean/clean.js",
     "dev:sass": "sass  --no-source-map --watch src/sass:./_tmp",
@@ -16,7 +16,9 @@
     "start": "NODE_ENV=dev npm-run-all --parallel dev:sass dev:eleventy",
     "build": "NODE_ENV=dev npm-run-all clean build:sass build:processcss build:eleventy",
     "stackblitz": "NODE_ENV=dev npm-run-all clean build:sass blitz:eleventy start",
-    "minify": "NODE_ENV=production npm-run-all clean build:sass minify:processcss minify:eleventy"
+    "minify": "NODE_ENV=production npm-run-all clean build:sass minify:processcss minify:eleventy",
+    "css": "npx postcss src/css/global.css -o dist/css/global.css",
+    "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npm run css"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,15 @@
     "lightningcss-cli": "^1.17.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.57.1",
-    "solid-js": "^1.6.6"
+    "solid-js": "^1.6.6",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.8",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-import-ext-glob": "^2.0.1",
+    "postcss-js": "^4.0.0",
+    "slugify": "^1.6.5",
+    "tailwindcss": "^3.0.23"
   },
   "browserslist": [
     "> 0.2%",
