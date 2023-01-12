@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include "partials/meta-info.njk" %}
     
-    <link rel="stylesheet" href="/css/global.css?{{ assetHash }}" />
-    <link rel="icon" href="/images/favicon.svg" />
+    <link rel="stylesheet" href="{{ '/css/global.css' | url }}?{{ assetHash }}" />
+    <link rel="icon" href="{{ '/images/favicon.svg' | url }}" />
 
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
       {% for item in pageStylesheets %}
-        <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+        <link rel="stylesheet" media="print" href="{{ item | url }}?{{ assetHash }}" onload="this.media='all'" />
       {% endfor %}
     {% endif %}
   </head>
