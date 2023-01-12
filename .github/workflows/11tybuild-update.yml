@@ -31,7 +31,7 @@ jobs:
         
       - name: Npm Build
         if: env.UPDATE_NPM != 'true'
-        run: npm run minify
+        run: npm run build
         
       - name: Deploy
         if: env.UPDATE_NPM != 'true'
@@ -40,11 +40,6 @@ jobs:
           publish_dir: ./dist 
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-        
-          add: '["*.json", "docs"]'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
           
       - name: pull request on npm update
         if: env.UPDATE_NPM == 'true'
