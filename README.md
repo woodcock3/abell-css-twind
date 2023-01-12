@@ -10,4 +10,4 @@ The source code of <https://buildexcellentwebsit.es/> for you to play around wit
 
 1. Run `npm install`
 2. Run `npm start` to run locally
-3. Run `npm run production` to do a prod build
+3. Run `npm run build` to do a prod build
