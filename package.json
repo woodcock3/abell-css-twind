@@ -1,7 +1,9 @@
 {
   "name": "build-excellent-websites",
   "version": "1.0.0",
-  "engines": { "node": "16.x" },
+  "engines": {
+    "node": "16.x"
+  },
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
@@ -14,18 +16,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "concurrently": "^6.2.1",
-    "cssnano": "^5.1.7",
-    "postcss": "^8.4.8",
+    "@11ty/eleventy": "^1.0.2",
+    "concurrently": "^6.5.1",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.21",
     "postcss-cli": "^9.1.0",
-    "postcss-import": "^14.0.2",
-    "postcss-import-ext-glob": "^2.0.1",
+    "postcss-import": "^14.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
     "postcss-js": "^4.0.0",
     "slugify": "^1.6.5",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "prettier": "^2.3.2"
+    "prettier": "^2.8.2"
   }
 }
