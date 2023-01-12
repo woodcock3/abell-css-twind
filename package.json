@@ -15,9 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "concurrently": "^7.6.0",
     "cssnano": "^5.1.14",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-js": "^4.0.0",
